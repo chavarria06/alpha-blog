@@ -16,7 +16,7 @@
                     Articles
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <%= link_to "Create New Article", new_article_path, class: "dropdown-item"%>
+                    <%= link_to "Create New Article", new_article_path, class: "dropdown-item"%>
                     <%= link_to "View Articles", articles_path, class: "dropdown-item"%>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Something else here</a>
@@ -31,6 +31,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <%= link_to "View your profile", user_path(current_user), class: "dropdown-item"%>
                     <%= link_to "Edit your profile", edit_user_path(current_user), class: "dropdown-item"%>
+                    <%= link_to "Delete your profile", user_path(current_user), class: "dropdown-item text-danger", method: :delete, data: { confirm: "Are you sure?"}%>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Something else here</a>
 
