@@ -19,9 +19,6 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <%= link_to "Create New Article", new_article_path, class: "dropdown-item"%>
                     <%= link_to "View Articles", articles_path, class: "dropdown-item"%>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-
                 </div>
             </li>
 
@@ -31,7 +28,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <% if current_user.admin?%>
-                    <%= link_to "Create New Article", new_article_path, class: "dropdown-item"%>
+                    <%= link_to "Create New Category", new_category_path, class: "dropdown-item"%>
                 <% end %>
                     <%= link_to "View Categories", categories_path, class: "dropdown-item"%>
                 </div>
